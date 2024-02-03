@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th{
+            border: 1px black solid;
+        }
+
+        td{
+            border-radius: 1px black solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is the greatest page on the internet.</h1>
+    {% if stud %}
+    <table>
+        <tr>
+            <th>Student Id</th>     
+            <th>Student Name</th>     
+            <th>Student Email</th>     
+            <th>Student Password</th>     
+        </tr>
+            
+    </table> 
+    {% comment %} {% for student in stud  %}
+    <tr>
+        <td>{{student.stid}}</td>
+        <td>{{student.stuname}}</td>
+        <td>{{student.stuemail}}</td>
+        <td>{{student.stupass}}</td>
+    </tr><br>
+   
+    {% endfor %} {% endcomment %}
+    {{Stud.stuname}}
+     {% else %}
+   <p>
+       Data is not present in teh database.
+    </p>
+
+    {% endif %}
+</body>
+</html>
